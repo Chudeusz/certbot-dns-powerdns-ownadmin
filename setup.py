@@ -1,22 +1,20 @@
 #! /usr/bin/env python
 from os import path
-from setuptools import setup
-from setuptools import find_packages
+from setuptools import setup, find_packages
 
-version = "1.0.4"
+version = "1.0.5"
 
 with open('README.md') as f:
     long_description = f.read()
 
 install_requires = [
-    'acme>=0.31.0',
-    'certbot>=0.31.0',
-    'dns-lexicon',
-    'dnspython',
-    'mock',
-    'setuptools',
-    'zope.interface',
-    'requests'
+    'acme>=1.12.0',
+    'certbot>=1.12.0',
+    'dns-lexicon>=3.10.0',
+    'dnspython>=2.0',
+    'setuptools>=40.8.0',
+    'zope.interface>=5.0',
+    'requests>=2.25.0'
 ]
 
 here = path.abspath(path.dirname(__file__))
@@ -31,7 +29,7 @@ setup(
     author="Chudeusz",
     author_email='chudeusz@ownadmin.pl',
     license='Apache License 2.0',
-    python_requires='>=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*',
+    python_requires='>=3.7',
     classifiers=[
         'Development Status :: 5 - Production/Stable',
         'Environment :: Plugins',
@@ -39,11 +37,7 @@ setup(
         'License :: OSI Approved :: Apache Software License',
         'Operating System :: POSIX :: Linux',
         'Programming Language :: Python',
-        'Programming Language :: Python :: 2',
-        'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.5',
-        'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
         'Programming Language :: Python :: 3.9',
